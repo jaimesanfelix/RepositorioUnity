@@ -16,4 +16,17 @@ public class SlimeMovement : MonoBehaviour
     {
         
     }
+
+
+    public void IAEstadoPatrullando()
+    {
+
+    }
+
+
+    public void Atacando()
+    {
+
+    }
+
 }

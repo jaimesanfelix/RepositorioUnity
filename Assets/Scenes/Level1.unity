@@ -727,12 +727,14 @@ GameObject:
   - component: {fileID: 360570245}
   - component: {fileID: 360570244}
   - component: {fileID: 360570243}
+  - component: {fileID: 360570248}
+  - component: {fileID: 360570249}
   - component: {fileID: 360570242}
   - component: {fileID: 360570246}
   - component: {fileID: 360570247}
   m_Layer: 0
   m_Name: HeroKnight
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -835,7 +837,8 @@ Transform:
   m_LocalPosition: {x: -6.0125, y: 2.12, z: 0}
   m_LocalScale: {x: 0.9812, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2070683240}
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -910,6 +913,33 @@ PolygonCollider2D:
       - {x: 0.40625, y: -0.625}
       - {x: 0.6875, y: -0.625}
   m_UseDelaunayMesh: 0
+--- !u!114 &360570248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360570241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ab7f0b3a94dfed45802b8e50fc57441, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jugador: {fileID: 360570243}
+--- !u!114 &360570249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360570241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d32257bed48f9d4f88b7e1521bd32ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disparoPrefab: {fileID: 2583133718521300932, guid: 3be465b0cbdec474b843cda604ba1300, type: 3}
+  puntoSalidaBala: {fileID: 2070683240}
 --- !u!1001 &374679724
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1452,6 +1482,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2656078100811175676, guid: 3e9cf7503926f5647a77561788f548d8, type: 3}
+      propertyPath: m_TagString
+      value: Enemigo
+      objectReference: {fileID: 0}
     - target: {fileID: 5285289055122180986, guid: 3e9cf7503926f5647a77561788f548d8, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -2059,6 +2093,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 659f421631313a147a1376f778cd09ef, type: 3}
+--- !u!1 &2070683239
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2070683240}
+  m_Layer: 0
+  m_Name: Disparo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2070683240
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070683239}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 360570245}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2115235848
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -19,6 +19,7 @@ public class ControlJugador : MonoBehaviour
     }
 
     // Update is called once per frame
+    private bool mirandoDerecha = true;
     void Update()
     {
 
@@ -27,12 +28,14 @@ public class ControlJugador : MonoBehaviour
             transform.Translate(Time.deltaTime * velocidad, 0, 0);
             GetComponent<SpriteRenderer>().flipX = false;
             controlEstados.SetBool("estaCorriendo", true);
+            mirandoDerecha = true;
         }
         else if(Input.GetKey(KeyCode.LeftArrow))
         {
             transform.Translate(Time.deltaTime * - velocidad, 0, 0);
             GetComponent<SpriteRenderer>().flipX = true;
             controlEstados.SetBool("estaCorriendo", true);
+            mirandoDerecha = false;
         }else{
             
             controlEstados.SetBool("estaCorriendo", false);
@@ -42,10 +45,15 @@ public class ControlJugador : MonoBehaviour
         {
             fisica.AddForce(new Vector2(0, impulso));
             controlEstados.SetBool("estaSaltando", true);
-        }
+        }   
 
-        
+    }
 
+    
+
+    public bool MirandoDerecha()
+    {
+        return mirandoDerecha;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -60,7 +68,6 @@ public class ControlJugador : MonoBehaviour
         
                 
     }
-
 
 
 
