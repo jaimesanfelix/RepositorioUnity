@@ -15,7 +15,7 @@ public class ControladorMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
 
@@ -27,6 +27,16 @@ public class ControladorMenu : MonoBehaviour
     public void Creditos()
     {
         SceneManager.LoadScene("Creditos");
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene("Level1");
+    }
+
+    public void Salir()
+    {
+        SceneManager.LoadScene("Inicio");
     }
 
 }
